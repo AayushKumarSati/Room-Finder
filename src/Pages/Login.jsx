@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <form className="bg-white p-8 rounded-xl shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
         {/* User Email Field  */}
 
         <div className="flex items-center border rounded-lg mb-4 px-3 py-2">

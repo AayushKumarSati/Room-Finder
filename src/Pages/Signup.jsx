@@ -46,7 +46,7 @@ export default function Signup() {
         </div>
 
         {/* User Confirm Password Field*/}
-        <div className="flex items-center border rounded-lg mb-6 px-3 py-2">
+        <div className="flex items-center border rounded-lg mb-4 px-3 py-2">
           <LockIcon className="text-gray-500 mr-2" />
           <input
             type="password"
@@ -54,6 +54,17 @@ export default function Signup() {
             className="w-full outline-none bg-transparent"
             required
           />
+        </div>
+        <div className="flex space-x-6 mb-4">
+          <div className="flex items-center space-x-2">
+            <input type="radio" id="owner" name="role" value="owner" />
+            <label htmlFor="owner">Owner</label>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <input type="radio" id="students" name="role" value="students" />
+            <label htmlFor="students">Student</label>
+          </div>
         </div>
 
         {/* Signup Button Field*/}

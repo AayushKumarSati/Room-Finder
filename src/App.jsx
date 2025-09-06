@@ -6,11 +6,13 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import OwnerDashboard from "./Pages/OwnerDashboard";
 import RoomDetails from "./Pages/RoomDetails";
+import Foot from "./Components/Foot";
 
 const App = () => {
   return (
     <>
       <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -18,6 +20,7 @@ const App = () => {
         <Route path="/owner" element={<OwnerDashboard />} />
         <Route path="/room/:id" element={<RoomDetails />} />
       </Routes>
+      <Foot />
     </>
   );
 };

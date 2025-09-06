@@ -17,18 +17,19 @@ export default function NavBar() {
             Home
             <HomeIcon className="mx-1" />
           </Link>
+
+          <Link
+            to="/signup"
+            className="hover:text-gray-200 hover:border-2  p-1.5 rounded-lg"
+          >
+            Signup
+          </Link>
           <Link
             to="/login"
             className="hover:text-gray-200 hover:border-2  p-1.5 rounded-lg"
           >
             Login
             <LoginIcon className="mx-1" />
-          </Link>
-          <Link
-            to="/signup"
-            className="hover:text-gray-200 hover:border-2  p-1.5 rounded-lg"
-          >
-            Signup
           </Link>
           <Link
             to="/owner"

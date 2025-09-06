@@ -3,17 +3,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function RoomDetails() {
-  const { id } = useParams();
-  const [room, setRoom] = useState(null);
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:8080/api/rooms/${id}`)
-      .then((res) => setRoom(res.data));
-  }, [id]);
-
-  if (!room) return <p className="p-6">Loading...</p>;
-
   return (
     <div className="p-6 max-w-2xl mx-auto bg-white shadow-lg rounded-2xl">
       <img

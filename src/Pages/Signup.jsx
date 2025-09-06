@@ -1,43 +1,76 @@
 import { useState } from "react";
-import axios from "axios";
+import PersonIcon from "@mui/icons-material/Person";
+import EmailIcon from "@mui/icons-material/Email";
+import LockIcon from "@mui/icons-material/Lock";
 
 export default function Signup() {
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await axios.post("http://localhost:8080/api/auth/signup", form);
-    alert("Signup Successful!");
-  };
-
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-xl shadow-lg"
-      >
-        <h2 className="text-2xl font-bold mb-4">Signup</h2>
-        <input
-          type="text"
-          placeholder="Name"
-          className="w-full border p-2 mb-3 rounded"
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full border p-2 mb-3 rounded"
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full border p-2 mb-3 rounded"
-          onChange={(e) => setForm({ ...form, password: e.target.value })}
-        />
-        <button className="w-full bg-green-600 text-white p-2 rounded">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+      <form className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl">
+        <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+          Signup
+        </h2>
+
+        {/* User name Field  */}
+        <div className="flex items-center border rounded-lg mb-4 px-3 py-2">
+          <PersonIcon className="text-gray-500 mr-2" />
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="w-full outline-none bg-transparent"
+            required
+          />
+        </div>
+
+        {/* User Email Field  */}
+
+        <div className="flex items-center border rounded-lg mb-4 px-3 py-2">
+          <EmailIcon className="text-gray-500 mr-2" />
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="w-full outline-none bg-transparent"
+            required
+          />
+        </div>
+        {/* User Password Field  */}
+
+        <div className="flex items-center border rounded-lg mb-4 px-3 py-2">
+          <LockIcon className="text-gray-500 mr-2" />
+          <input
+            type="password"
+            placeholder="Enter New Password"
+            className="w-full outline-none bg-transparent"
+            required
+          />
+        </div>
+
+        {/* User Confirm Password Field*/}
+        <div className="flex items-center border rounded-lg mb-6 px-3 py-2">
+          <LockIcon className="text-gray-500 mr-2" />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            className="w-full outline-none bg-transparent"
+            required
+          />
+        </div>
+
+        {/* Signup Button Field*/}
+        <button className="w-full bg-green-600 hover:bg-green-700 transition duration-300 text-white font-semibold py-2 rounded-lg shadow-md">
           Signup
         </button>
+
+        {/* Login Link */}
+        <div className="flex justify-center items-center mt-4 text-sm">
+          <p className="text-gray-600">Already have an account?</p>
+          <a
+            href="/login"
+            className="ml-1 text-blue-600 font-medium hover:underline"
+          >
+            Login Here
+          </a>
+        </div>
       </form>
     </div>
   );

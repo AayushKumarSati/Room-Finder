@@ -34,6 +34,34 @@ export default function Home() {
       price: 3500,
       image: "https://picsum.photos/400/200?random=4",
     },
+    {
+      id: 5,
+      title: "Boys Hostel Near XYZ College",
+      location: "ABC Colony",
+      price: 5000,
+      image: "https://picsum.photos/400/200?random=1",
+    },
+    {
+      id: 6,
+      title: "PG for Girls",
+      location: "Near Market Road",
+      price: 6000,
+      image: "https://picsum.photos/400/200?random=2",
+    },
+    {
+      id: 7,
+      title: "Single Room Flat",
+      location: "Hostel Road",
+      price: 4500,
+      image: "https://picsum.photos/400/200?random=3",
+    },
+    {
+      id: 8,
+      title: "Shared Room",
+      location: "City Center",
+      price: 3500,
+      image: "https://picsum.photos/400/200?random=4",
+    },
   ];
 
   const filteredRooms = rooms.filter((room) =>
@@ -81,3 +109,48 @@ export default function Home() {
     </div>
   );
 }
+// return (
+//   <div className="flex items-center justify-center h-screen bg-gray-300">
+//     <form className="bg-white p-8 rounded-xl shadow-lg">
+//       <h2 className="text-2xl font-bold mb-4">Signup</h2>
+//       <PersonIcon />
+//       <input
+//         type="text"
+//         placeholder="Name"
+//         className="w-full border p-2 mb-3 rounded"
+//         required
+//       />
+//       <EmailIcon />
+//       <input
+//         type="email"
+//         placeholder="Email"
+//         className="w-full border p-2 mb-3 rounded"
+//         required
+//       />
+//       <LockIcon />
+//       <input
+//         type="password"
+//         placeholder="Enter New Password"
+//         className="w-full border p-2 mb-3 rounded"
+//         required
+//       />
+//         <LockIcon />
+//       <input
+//         type="password"
+//         placeholder="Confirm Your Password"
+//         className="w-full border p-2 mb-3 rounded"
+//         required
+//       />
+//       <button className="w-full bg-green-600 text-white p-2 rounded">
+//         Signup
+//       </button>
+//       <div className="flex justify-center items-center">
+//         {" "}
+//         <p>Have an Account? </p>
+//         <a href="/login" className="text-blue-700">
+//           Login Here
+//         </a>
+//       </div>
+//     </form>
+//   </div>
+// );

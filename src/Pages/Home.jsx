@@ -74,7 +74,7 @@ export default function Home() {
       <section className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-16 md:py-24 text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold leading-snug">
           Find Your Perfect Room Near College
-        </h1>
+        </h1>ko
         <p className="mt-4 text-md md:text-lg max-w-xl mx-auto">
           Search, Compare and Book Affordable Rooms in just a click!
         </p>
